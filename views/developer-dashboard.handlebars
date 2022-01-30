@@ -6,34 +6,31 @@
         <div class="row">
             <h3 class="py-5">Service Requests from Members</h3>     
         </div>
-    <div class="row">
-        <ol class="service-list">
-            {{#each services as |service|}}
-            <li>
+        <div class="row">
+            <ol class="service-list">
+                {{#each services as |service|}}
+                <li>
                 {{> service-info service }}
-                <button type="submit" class="px-5" id="accept-project">ACCEPT PROJECT</button>
-            </li>
-            {{/each}}
-        </ol>
-    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
     </section>
-    {{/if}}
 
+    {{#if accept-project.length}}
     <section>  
         <div class="row">
             <h3 class="py-5">Your Projects</h3>
-        </div> 
-        <div class="row">
-        <ol class="service-accepted">
-            {{#each this}}
-            <li>
+            <ol class="accept-project">
+                {{#each services as |service|}}
+                <li>
                 {{> service-info service }}
-                <button type="submit" class="px-5" id="accept-project">ACCEPT PROJECT</button>
-            </li>
-            {{/each}}
-        </ol>
-    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
     </section> 
+    
 </div>
 <script scr="/javascript/accept-service.js"></script>
 
