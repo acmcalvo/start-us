@@ -1,13 +1,15 @@
 <article class="service">
     <div class="title">
+        {{service_title}}
         {{service_type}} 
         <span>- (Created on
-        {{format_date created_at}} by {{member.membername}} - Budget {{budget}}
+        {{format_date created_at}} by {{user.username}} - Budget {{budget}}
         </span>
         
     </div>
     <div class="meta">
         {{service_description}}
-        
+        {{budget}}
+        <button type="submit" class="px-5" id="accept-project">ACCEPT PROJECT</button>
     </div>
 </article>
