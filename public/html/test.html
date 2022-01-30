@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Radio Button</title>
+</head>
+<body>
+    <p>Select your Menmbership:</p>
+    <div>
+        <input type="radio" name="size" value="Member" id="member_1">
+        <label for="member_1">Member</label>
+    </div>
+    <div>
+        <input type="radio" name="size" value="S" id="dev">
+        <label for="dev">Developer</label>
+    </div>
+    
+  
+        <button id="btn">Show Selected Value</button>
+    </p>
+
+    <p id="output"></p>
+
+    <script>
+        const btn = document.querySelector('#btn');        
+        const radioButtons = document.querySelectorAll('input[name="size"]');
+        btn.addEventListener("click", () => {
+            let selectedSize;
+            for (const radioButton of radioButtons) {
+                if (radioButton.checked) {
+                    selectedSize = radioButton.value;
+                    break;
+                }
+            }
+           
+            output.innerText = selectedSize ? `You selected ${selectedSize}` : `You haven't selected any size`;
+        });
+    </script>
+</body>
+</html>
