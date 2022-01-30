@@ -1,12 +1,7 @@
 const router = require('express').Router();
-const {
-    UPSERT
-} = require('sequelize/dist/lib/query-types');
+const { UPSERT } = require('sequelize/dist/lib/query-types');
 const sequelize = require('../../config/connection');
-const {
-    User,
-    Service
-} = require('../../models');
+const { User, Service } = require('../../models');
 const {
     post
 } = require('./developer-routes');
@@ -22,8 +17,8 @@ router.get('/', (req, res) => {
                 'created_at'
             ],
             include: [{
-                model: Member,
-                attributes: ['member_username']
+                model: User,
+                attributes: ['username']
             }]
         })
         .then(dbServiceData => res.json(dbServiceData))
@@ -46,8 +41,8 @@ router.get('/:id', (req, res) => {
                 'member_id'
             ],
             include: [{
-                model: Member,
-                attributes: ['member_username']
+                model: User,
+                attributes: ['username']
             }]
         })
         .then(dbServiceData => {
@@ -123,6 +118,8 @@ router.delete('/:id', (req, res) => {
             res.status(500).json(err);
         });
 });
+
+module.exports = router;
 // developers need to find all or find one service
 
 //get all that applies to developers shows all services on dashboard
