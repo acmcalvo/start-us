@@ -16,17 +16,15 @@
                 <img src="/assets/logo_start_us.svg" alt="" width="180" height="">
             </a>
             <nav>
-                <a href="/">Home</a> |
                 
                 {{#if loggedIn}}
                 <a href="/developer-dashboard/">Dev Dashboard</a> |
-                <a id="developer-logout" href="/">Logout</a>
                 <a href="/member-dashboard/">Dev Dashboard</a> |
-                <a id="member-logout" href="/">Logout</a>
+                <a id="logout" href="/">Logout</a>
                 {{else}}
-                <a href="/how-it-works">How it Works</a> |
-                <a href="/developer-login/">Developer Login</a> |
-                <a href="/member-login/">Member Login</a>
+                <a href="/">Home</a> |
+                <a href="/">How it Works</a> |
+                <a href="/login/">Login</a> |
                 {{/if}}
             </nav>
         </header>
