@@ -1,10 +1,8 @@
 const router = require('express').Router();
-const { UPSERT } = require('sequelize/dist/lib/query-types');
+//const { UPSERT } = require('sequelize/dist/lib/query-types');
 const sequelize = require('../../config/connection');
 const { User, Service } = require('../../models');
-const {
-    post
-} = require('./developer-routes');
+//const { post } = require('./developer-routes');
 
 //get all services
 router.get('/', (req, res) => {
