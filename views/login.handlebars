@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <form class="login-form">
-                <h1>Developer Login</h1>
+                <h1>Login</h1>
                 <h4>Welcome back!</h4>
                 <div class="form-group">
                     <label for="email-login">Email address</label>
@@ -12,16 +12,25 @@
                     <label for="password-login">Password</label>
                     <input type="password" class="form-control" placeholder="Password" id="password-login">
                 </div>
+                <h5>Choose an account type:</h5>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="defaultCheck1">
+                    <label for="account-type" class="form-check-label">Member</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="defaultCheck2">
+                    <label for="account-type defaultCheck2" class="form-check-label">Developer</label>
+                </div>
                 <button type="submit" class="px-5">LOGIN</button>
             </form>
         </div>
         <div class="col">
             <form class="signup-form">
-                <h1>Developer Sign Up</h1>
-                <h4>Join the team!</h4>
+                <h1>Sign Up</h1>
+                <h4>Let's grow together!</h4>
                 <div class="form-group">
-                    <label for="devname-signup">Username</label>
-                    <input type="text" class="form-control" id="devname-signup">
+                    <label for="username-signup">Username</label>
+                    <input type="text" class="form-control" id="membername-signup">
                 </div>
                 <div class="form-group">
                     <label for="email-signup">Email address</label>
@@ -31,9 +40,20 @@
                     <label for="password-signup">Password</label>
                     <input type="password" class="form-control" id="password-signup">
                 </div>
+                <h5>Choose an account type:</h5>
+                <div class="form-check">
+                    
+                    <input type="checkbox" class="form-check-input" id="defaultCheck1">
+                    <label for="account-type" class="form-check-label">Member</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="defaultCheck2">
+                    <label for="account-type defaultCheck2" class="form-check-label">Developer</label>
+                </div>
                 <button type="submit" class="px-5">SIGNUP</button>
             </form>
+
         </div>
     </div>
 </div>
-<script scr="/javascript/developer-login.js"></script>
+<script scr="/javascript/login.js"></script>
