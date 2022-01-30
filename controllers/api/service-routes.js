@@ -4,9 +4,7 @@ const {
 } = require('sequelize/dist/lib/query-types');
 const sequelize = require('../../config/connection');
 const {
-    Member,
-    Developer,
-    Response,
+    User,
     Service
 } = require('../../models');
 const {
