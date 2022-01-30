@@ -1,4 +1,39 @@
-
+        <div class="container py-5">
+            <div class="row">  
+                <form class="edit-service-form">
+                    <a href="/member-dashboard"> &larr; Back to dashboard</a>
+                    <h1 class="py-5">Edit Service</h1>
+                    <h5>Edit service type:</h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="defaultCheck1" value="{{service.service_type}}" >
+                        <label for="service-type" class="form-check-label">Website</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="defaultCheck2" value="{{service.service_type}}">
+                        <label for="service-type defaultCheck2" class="form-check-label">Online Marketing</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="defaultCheck3" value="{{service.service_type}}">
+                        <label for="service-type defaultCheck3" class="form-check-label">Programming</label>   
+                    </div>
+                    <div class="form-group">
+                        <label for="service-title">Service Title</label>
+                        <input type="text" class="form-control" id="service-title" value="{{service.service_title}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-description">Service Description</label>
+                        <input type="textarea" class="form-control" id="service-description" value="{{service.service_description}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget</label>
+                        <input type="text" class="form-control" id="budget" value="{{service.budget}}">
+                    </div>
+                    <button type="submit">Save Post</button>
+                    <button type="button" class="delete-post-btn">Delete Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 <script src="/javascript/edit-service.js"></script>
 <script src="/javascript/delete-service.js"></script>

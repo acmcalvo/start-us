@@ -1,2 +1,2 @@
 // function for the edit-service.handlebars
-// (edi-service-form)
+// <form class="edit-service-form">

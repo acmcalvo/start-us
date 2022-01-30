@@ -1,1 +1,1 @@
-//function for the DELETE button on edit-service.handlers
+//function for the DELETE button on edit-service.handlebars
