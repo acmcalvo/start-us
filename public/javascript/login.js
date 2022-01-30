@@ -5,17 +5,17 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
     
     const btn = document.querySelector('#btn');        
-    const rectangleButtons = document.querySelectorAll('input[name="size"]');
+    const radioButtons = document.querySelectorAll('input[name="membership"]');
     btn.addEventListener("click", () => {
         let account_type;
-        for (const rectangleButton of rectangleButton) {
-            if (rectangleButton.checked) {
-                account_type = rectangleButton.value;
+        for (const radioButton of radioButtons) {
+            if (radioButton.checked) {
+                account_type = radioButton.value;
                 break;
             }
         }
-        // show the output:
-        output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected account `;
+       
+        output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected any size`;
     });
 
   
