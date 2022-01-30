@@ -24,46 +24,45 @@
                 <a id="logout" href="/">Logout</a>
             </nav>
         </header>
-        
     <main>
         <!--start MEMBER-DASHBOARD.handlebar-->
         <div class="container py-5">
             <div class="row">  
-                    <form class="new-service-form">
-                        <h1>Member Dashboard</h1>
-                        <h3 class="py-3">Create a new service request</h3>
-                        <h5>Choose an option for a Service Type:</h5>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="defaultCheck1" >
-                            <label for="service-type" class="form-check-label">Website</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="defaultCheck2" >
-                            <label for="service-type defaultCheck2" class="form-check-label">Online Marketing</label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="defaultCheck3" >
-                            <label for="service-type defaultCheck3" class="form-check-label">Programming</label>   
-                        </div>
-                        <div class="form-group">
-                            <label for="service-title">Service Title</label>
-                            <input type="text" class="form-control" id="service-title">
-                        </div>
-                        <div class="form-group">
-                            <label for="service-description">Service Description</label>
-                            <input type="textarea" class="form-control" id="service-description">
-                        </div>
-                        <div class="form-group">
-                            <label for="budget">Budget</label>
-                            <input type="text" class="form-control" id="budget">
-                        </div>
-                        <button type="submit" class="px-5">SUBMIT</button>
-                    </form>
+                <form class="edit-service-form">
+                    <a href="/member-dashboard"> &larr; Back to dashboard</a>
+                    <h1 class="py-5">Edit Service</h1>
+                    <h5>Edit service type:</h5>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="defaultCheck1" value="{{service.service_type}}" >
+                        <label for="service-type" class="form-check-label">Website</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="defaultCheck2" value="{{service.service_type}}">
+                        <label for="service-type defaultCheck2" class="form-check-label">Online Marketing</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="defaultCheck3" value="{{service.service_type}}">
+                        <label for="service-type defaultCheck3" class="form-check-label">Programming</label>   
+                    </div>
+                    <div class="form-group">
+                        <label for="service-title">Service Title</label>
+                        <input type="text" class="form-control" id="service-title" value="{{service.service_title}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-description">Service Description</label>
+                        <input type="textarea" class="form-control" id="service-description" value="{{service.service_description}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget</label>
+                        <input type="text" class="form-control" id="budget" value="{{service.budget}}">
+                    </div>
+                    <button type="submit">Save Post</button>
+                    <button type="button" class="delete-post-btn">Delete Post</button>
+                </form>
             </div>
-            <h3 class="py-5">Your Service Requests</h3>
-        </div>    
-        <script scr="/javascript/add-service.js"></script>
-        <!--END MEMBER-DASHBOARD.handlebar-->
+        </div>
+    </div>
+    <!--END MEMBER-DASHBOARD.handlebar-->
         </main>
         <footer>
             <div class="container">
@@ -71,7 +70,7 @@
                     <div class="col-sm">
                         <h4>Categories</h4>
                         <ul>
-                            <li>Website</li>
+                            <li>Web Design</li>
                             <li>Online Marketing</li>
                             <li>Programming &amp; Tech</li>
                         </ul>
@@ -99,3 +98,7 @@
 </body>
 
 </html>
+
+
+
+

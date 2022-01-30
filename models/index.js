@@ -1,21 +1,16 @@
 // import all models
-const Member = require('./Member');
-const Developer = require('./Developer');
+const User = require('./User');
 const Service = require('./Service');
 
 
 //associations
-Service.belongsTo(Member, {
-    foreignKey: 'member_id'
+Service.belongsTo(User, {
+    foreignKey: 'user_id'
 });
 
-Member.hasMany(Service, {
-    foreignKey: 'member_id'
-});
-
-Member.hasMany(Developer, {
-    foreignKey: 'member_id'
+User.hasMany(Service, {
+    foreignKey: 'user_id'
 });
 
 
-module.exports = { Member, Developer, Service };
+module.exports = { User,Service };

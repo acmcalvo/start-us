@@ -17,13 +17,11 @@
             </a>
             <nav>
                 <a href="/">Home</a> |
-                <a href="/developer-dashboard/">Dev Dashboard</a> |
-                <a id="developer-logout" href="/">Logout</a>
-                <a href="/member-dashboard/">Dev Dashboard</a> |
-                <a id="member-logout" href="/">Logout</a>
                 <a href="/">How it Works</a> |
-                <a href="/developer-login/">Developer Login</a> |
-                <a href="/member-login/">Member Login</a>
+                <a href="/login/">Login</a> |
+                <a href="/developer-dashboard/">Dev Dashboard</a> |
+                <a href="/member-dashboard/">Dev Dashboard</a> |
+                <a id="logout" href="/">Logout</a>
             </nav>
         </header>
         
@@ -31,14 +29,24 @@
         <!--start DEVELOPER-DASHBOARD.handlebar-->
         <div class="container py-5">
             <div class="row">
-                <h3 class="py-5">Service Requests from Members</h3>
+                <h1>Developer Dashboard</h1>
+            </div>
+            <div class="row">
+                <h3 class="py-5">Service Requests from Members</h3>     
+            </div>
+            <div class="row">
+                <p>MEMBERS SERVICE REQUEST WILL RENDER HERE</p>
             </div>
             <div class="row">
                 <button type="submit" class="px-5" id="accept-project">ACCEPT PROJECT</button>
             </div> 
             <div class="row">
                 <h3 class="py-5">Your Projects</h3>
+                
             </div> 
+            <div class="row">
+            <p>PROJECTS ACCEPTED WILL RENDER HERE</p>
+            </div>
         </div>
         <script scr="/javascript/accept-service.js"></script>
         <!--END DEVELOPER-DASHBOARD.handlebar-->

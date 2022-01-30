@@ -1,11 +1,12 @@
-const developerRoutes = require('./developer-routes.js');
-const memberRoutes = require('./member-routes');
-const responseRoutes = require('./response-routes');
-const serviceRoutes = require('./service-routes');
+const router = require('express').Router();
 
-router.use('/developer', developerRoutes);
-router.use('/member', memberRoutes);
-router.use('/response', responseRoutes);
-router.use('/service', serviceRoutes);
+
+const usersRoutes = require('./user-routes');
+
+const servicesRoutes = require('./service-routes');
+
+router.use('/users', usersRoutes);
+router.use('/service', servicesRoutes);
+
 
 module.exports = router;

@@ -1,0 +1,1 @@
+// function for signup and login buttons on login.handlebars

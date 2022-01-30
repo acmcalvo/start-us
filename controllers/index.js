@@ -1,13 +1,10 @@
-const router = require('express').Router();
+const router = require('express').Router ();
+const apiRoutes = require('./api');
+const homeRoutes = require('./home-routes');
+const userDashboard = require('./user-dashboard-routes');
 
-const developerRoutes = require('./developer-routes.js');
-const membersRoutes = require('./members-routes');
-const responseRoutes = require('./response-routes');
-const servicesRoutes = require('./service-routes');
+router.use('/api', apiRoutes) // for CRUD
+router.use('/', homeRoutes) //views
+router.use('/user', userDashboard) ///member; /developer
 
-router.use('/users', userRoutes);
-router.use('/posts', postRoutes);
-router.use('/comments', commentRoutes);
-router.use('/comments', commentRoutes);
-
-module.exports = router;
+module.exports = router

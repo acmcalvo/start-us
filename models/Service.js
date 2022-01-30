@@ -20,17 +20,17 @@ Service.init (
             allowNull: false
         },
         service_description: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             allowNull: false
         },
         budget: {
             type: DataTypes.DECIMAL,
             allowNull: false
         },
-        member_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'member',
+                model: 'user',
                 key: 'id'
             }
         }
