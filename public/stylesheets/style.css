@@ -1,8 +1,22 @@
 * {
     box-sizing: border-box;
 }
+h1 {
+    font-size: 2.5rem;
+}
 h3 {
     color: #27AAE1;
+}
+h4 {
+    font-weight: bold;
+}
+h5 {
+    font-weight: bold;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    padding: 1%;
 }
 a {
     text-decoration: none;
@@ -36,6 +50,25 @@ button {
     color: #333;
     text-decoration: none;
 }
+
+#logo{
+    padding-right: 50px;
+}
+
+a.navbar-item, .navbar-link {
+    color: #000;
+    text-decoration: none;
+}
+
+a.navbar-item:hover {
+    color: #DF8A27;
+    background-color: #fff;
+}
+
+#navMenu.navbar-menu {
+    float:right;
+}
+
 
 .jumbotron {
     background-image: url('../assets/hero.jpg');
@@ -96,13 +129,7 @@ form label {
     flex-direction: column;
 }
 
-header {
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
+
 
 header h1 {
     font-size: 1em;
@@ -197,8 +224,5 @@ header h1 {
 
 footer {
     border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
     padding: 1%;
-    font-size: 110%;
 }
