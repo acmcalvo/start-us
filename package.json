@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Cesar863/start-us#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bulma-start": "^0.0.4",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",

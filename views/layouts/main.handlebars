@@ -6,58 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+      <!-- navbar JQuery code -->
+   <script> 
+        $(document).ready(function() {
+        // Check for click events on the navbar burger icon
+            $('.navbar-burger').click(function() {
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $(".navbar-burger").toggleClass("is-active");
+            $(".navbar-menu").toggleClass("is-active");
+    
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div class="wrapper">
         <header>
-            <a href="/">
-                <img src="/assets/logo_start_us.svg" alt="" width="180" height="">
-            </a>
-            <nav>
-                
-                {{#if loggedIn}}
-                <a href="/developer-dashboard/">Dev Dashboard</a> |
-                <a href="/member-dashboard/">Dev Dashboard</a> |
-                <a id="logout" href="/">Logout</a>
-                {{else}}
-                <a href="/">Home</a> |
-                <a href="/">How it Works</a> |
-                <a href="/login/">Login</a> |
-                {{/if}}
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="" id="logo" href="/">
+                    <img src="/assets/logo_start_us.svg" alt="" width="180" height="">
+                    </a> 
+                    <a role="button" class="navbar-burger " data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    </a>
+                </div>    
+                <!-- navbar links -->
+                <div class="navbar-menu" id="navMenu">
+                    {{#if loggedIn}}
+                    <a href="/developer-dashboard/" class="navbar-item">Dev Dashboard</a> |
+                    <a href="/member-dashboard/" class="navbar-item">Dev Dashboard</a> |
+                    <a id="logout" href="/" class="navbar-item">Logout</a>
+                    {{else}}
+                    <a href="/" class="navbar-item">Home</a> 
+                    <a href="/" class="navbar-item">How it Works</a> 
+                    <a href="/login/" class="navbar-item">Login</a> 
+                    {{/if}}
+                </div>
             </nav>
+
         </header>
         <main>
             {{{ body }}}
         </main>
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
+            <div class="columns">
+                <div class="column is-one-third">
                         <h4>Categories</h4>
                         <ul>
                             <li>Web Design</li>
                             <li>Graphic Design</li>
                             <li>Programming &amp; Tech</li>
                         </ul>
-                    </div>
-                    <div class="col-sm">
+                </div>
+                <div class="column is-one-third">
                         <h4>About</h4>
                         <ul>
                             <li>Partnerships</li>
                             <li>Chamber of Commerce</li>
                             <li>Associations</li>
                         </ul>
-                    </div>
-                    <div class="col-sm">
+                </div>
+                <div class="column is-one-third">
                         <h4>Support</h4>
                         <ul>
                             <li>Help &amp; Support</li>
                             <li>Dev Team</li>
                             <li>Members</li>
                         </ul>
-                    </div>
                 </div>
             </div>
         </footer>
