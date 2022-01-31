@@ -2,6 +2,7 @@ const router = require('express').Router();
 const sequielize = require('../config/connection');
 const { User, Service } = require('../models');
 
+
 // get all posts for dashboard
 router.get('/', (req, res) => {
     Service.findAll({
@@ -56,7 +57,7 @@ router.get('/edit/:id', (req, res) => {
     .then(dbServiceData => {
         if (dbServiceData) {
             const services = dbServiceData.get({ plain: true });
-            res.render('edit-post', {
+            res.render('edit-service', {
                 post,
                 loggedIn: true
             });
