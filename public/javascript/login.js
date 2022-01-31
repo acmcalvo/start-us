@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 async function loginFormHandler(event) {
     event.preventDefault();
   
@@ -6,21 +5,21 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-login').value.trim();
     
     const btn = document.querySelector('#btn');        
-    const radioButtons = document.querySelectorAll('input[name="membership"]');
+    const checkboxs = document.querySelectorAll('input[name="membership"]');
     btn.addEventListener("click", () => {
         let account_type;
-        for (const radioButton of radioButtons) {
-            if (radioButton.checked) {
-                account_type = radioButton.value;
+        for (const checkbox of checkboxs) {
+            if (checkbox.checked) {
+                account_type = checkbox.value;
                 break;
             }
         }
        
-        output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected any size`;
+        output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected any Membership`;
     });
 
   
-    if (email && password && account) {
+    if (email && password ) {
       const response = await fetch('/api/users/login', {
         method: 'post',
         body: JSON.stringify({
@@ -67,6 +66,3 @@ async function loginFormHandler(event) {
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
-=======
-
->>>>>>> 07715256f1f98f89f606a1dd054c3e053a28b168
