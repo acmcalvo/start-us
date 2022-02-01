@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const sequielize = require('../config/connection');
 const { User, Service } = require('../models');
+const withAuth = require('../utils/auth');
 
 
 // get all posts for dashboard
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Service.findAll({
         where: {
             user_id: req.res.id
@@ -35,7 +36,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
     Service.findByPk(req.params.id, {
         attributes: [
             'id',
