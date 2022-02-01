@@ -70,6 +70,14 @@ a.navbar-item:hover {
     float:right;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
 .jumbotron {
     background-image: url('../assets/hero.jpg');
@@ -111,7 +119,11 @@ input.radio{
     
 }
 .service-type {
-    width: 400px;
+    width: 350px;
+    align-items:center;
+}
+.account-type {
+    width: 100px;
     align-items:center;
 }
 form label {
@@ -130,17 +142,6 @@ form label {
     padding: 1%;
 
 }
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-
 
 header h1 {
     font-size: 1em;
@@ -217,4 +218,5 @@ header h1 {
 footer {
     border-top: 1px solid #ccc;
     padding: 1%;
+    display: block;
 }
