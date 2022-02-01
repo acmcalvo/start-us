@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
             'service_description',
             'budget',
             'user_id'
-            //sequelize data
+            //[sequelize.literal('(SELECT COUNT(*) FROM user WHERE user.id')]
         ],
         include: [
             {
@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         });
     })
     .catch(err => {
-        console.loggedIn(err);
+        console.log(err);
         res.status(500).json(err);
     });
 });

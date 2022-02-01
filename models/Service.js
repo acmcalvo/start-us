@@ -30,8 +30,8 @@ Service.init (
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
-                key: 'username'
+                model: 'user',
+                key: 'id'
             }
         }
     },

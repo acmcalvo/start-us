@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
       <!-- navbar JQuery code -->
-   <script> 
+   {{!-- <script> 
         $(document).ready(function() {
         // Check for click events on the navbar burger icon
             $('.navbar-burger').click(function() {
@@ -19,7 +19,7 @@
     
             });
         });
-    </script>
+    </script> --}}
 </head>
 
 <body>
@@ -37,7 +37,7 @@
                     </a>
                 </div>    
                 <!-- navbar links -->
-                <div class="navbar-menu" id="navMenu">
+                <div class="navbar-menu" id="navMenu"></div>
                     {{#if loggedIn}}
                     <a href="/developer-dashboard/" class="navbar-item">Dev Dashboard</a> |
                     <a href="/member-dashboard/" class="navbar-item">Dev Dashboard</a> |
@@ -85,6 +85,7 @@
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    <script src="/javascript/burger.js"></script>
     {{/if}}
 </body>
 
