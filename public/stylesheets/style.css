@@ -6,6 +6,7 @@ h1 {
 }
 h3 {
     color: #27AAE1;
+    font-size: 1.5rem;
 }
 h4 {
     font-weight: bold;
@@ -86,7 +87,6 @@ input {
     padding: .5%;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #888;
 }
 
 textarea:focus,
@@ -103,9 +103,20 @@ textarea {
 form>div {
     margin-bottom: 2%;
 }
-
+input[type=radio],
+input.radio{
+    float: right;
+    clear: none;
+    align-items:baseline;
+    
+}
+.service-type {
+    width: 400px;
+    align-items:center;
+}
 form label {
     display: block;
+    
 }
 
 .login-form {
@@ -195,27 +206,8 @@ header h1 {
 }
 
 
-.comment-form {
-    margin-bottom: 5%;
-}
-
-.comment {
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-    background-color: #ebfbff;
-}
-
-.comment .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
-}
-
 .new-service-form input {
-    width: 300px;
+    width: 400px;
 }
 
 .edit-service-form {

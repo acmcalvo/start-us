@@ -5,14 +5,17 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="addservice-title"]').value;
-    const post_url = document.querySelector('input[name="addservice-url"]').value;
-  
+    const service_type = document.querySelector('input[name"service-type"]').value;
+    const service_title = document.querySelector('input[name="service-title"]').value;
+    const service_description = document.querySelector('input[name="service-description"]').value;
+    const budget = document.querySelector('input[name="budget"]').value;
     const response = await fetch(`/api/service`, {
       method: 'POST',
       body: JSON.stringify({
-        title,
-        post_url
+        service_type,
+        service_title,
+        service_description,
+        budget
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -20,10 +23,10 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/user');
     } else {
       alert(response.statusText);
     }
   }
   
-  document.querySelector('.new-post-service').addEventListener('submit', newFormHandler);
+  document.querySelector('.new-service-form').addEventListener('submit', newFormHandler);

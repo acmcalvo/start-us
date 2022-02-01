@@ -8,7 +8,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
     Service.findAll({
         where: {
-            user_id: req.res.id
+            user_id: req.session.user_id
         },
         attributes: [
             'id',
@@ -16,7 +16,8 @@ router.get('/', withAuth, (req, res) => {
             'service_type',
             'service_description',
             'budget',
-            'user_id'
+            'created_at',
+            
             // serquelize data goes here
         ],
         include: [
@@ -27,8 +28,8 @@ router.get('/', withAuth, (req, res) => {
         ]
     })
     .then(dbServiceData => {
-        const services = dbServiceData.map(post => post.get({ plain: true }));
-        res.render('dashboard', { services, loggedIn: true });
+        const services = dbServiceData.map(post => service.get({ plain: true }));
+        res.render('member-dashboard', { services, loggedIn: true });
     })
     .catch(err => {
         console.log(err);
