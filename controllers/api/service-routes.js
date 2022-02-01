@@ -31,18 +31,19 @@ router.get('/:id', (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: [
-                'id',
-                'service_type',
-                'service_description',
-                'budget',
-                'member_id'
-            ],
-            include: [{
-                model: User,
-                attributes: ['username']
-            }]
-        })
+            // attributes: [
+            //     'id',
+            //     'service_type',
+            //     'service_description',
+            //     'budget',
+            //     'member_id'
+            // ],
+            // include: [{
+            //     model: User,
+            //     attributes: ['username']
+            // }]
+        }
+        )
         .then(dbServiceData => {
             if (!dbServiceData) {
                 res.status(404).json({
