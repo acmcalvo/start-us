@@ -28,7 +28,7 @@ router.get('/', (req, res) => {
         });
     })
     .catch(err => {
-        console.loggedIn(err);
+        console.log(err);
         res.status(500).json(err);
     });
 });

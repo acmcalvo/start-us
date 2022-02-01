@@ -4,21 +4,21 @@ async function loginFormHandler(event) {
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
     
-    const btn = document.querySelector('#btn');        
-    const checkboxs = document.querySelectorAll('input[name="membership"]');
-    btn.addEventListener("click", () => {
-        let account_type;
-        for (const checkbox of checkboxs) {
-            if (checkbox.checked) {
-                account_type = checkbox.value;
-                break;
-            }
-        }
+    // const btn = document.querySelector('#btn');        
+    // const checkboxs = document.querySelectorAll('input[name="membership"]');
+    // btn.addEventListener("click", () => {
+    //     let account_type;
+    //     for (const checkbox of checkboxs) {
+    //         if (checkbox.checked) {
+    //             account_type = checkbox.value;
+    //             break;
+    //         }
+    //     }
        
-        output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected any Membership`;
-    });
+    //     output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected any Membership`;
+    // });
 
-  
+  console.log(email, password)
     if (email && password ) {
       const response = await fetch('/api/users/login', {
         method: 'post',
@@ -30,7 +30,7 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/user/dashboard/');
+        document.location.replace('/user');
       } else {
         alert(response.statusText);
       }
