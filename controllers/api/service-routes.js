@@ -3,21 +3,25 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { User, Service } = require('../../models');
 //const { post } = require('./developer-routes');
+const withAuth = require('../../utils/auth');
 
 //get all services
 router.get('/', (req, res) => {
     Service.findAll({
             attributes: [
                 'id',
+                'service_title',
                 'service_type',
                 'service_description',
                 'budget',
-                'created_at'
+                'created_at',
+                'user_id',
+                //[sequelize.literal('(SELECT COUNT(*) FROM service where service.id = user.user_id)')]
             ],
-            include: [{
-                model: User,
-                attributes: ['username']
-            }]
+            // include: [{
+            //     model: User,
+            //     attributes: ['id']
+            // }]
         })
         .then(dbServiceData => res.json(dbServiceData))
         .catch(err => {
@@ -31,18 +35,19 @@ router.get('/:id', (req, res) => {
             where: {
                 id: req.params.id
             },
-            attributes: [
-                'id',
-                'service_type',
-                'service_description',
-                'budget',
-                'member_id'
-            ],
-            include: [{
-                model: User,
-                attributes: ['username']
-            }]
-        })
+            // attributes: [
+            //     'id',
+            //     'service_type',
+            //     'service_description',
+            //     'budget',
+            //     'user_id'
+            // ],
+            // include: [{
+            //     model: User,
+            //     attributes: ['username']
+            // }]
+        }
+        )
         .then(dbServiceData => {
             if (!dbServiceData) {
                 res.status(404).json({
@@ -58,13 +63,13 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Service.create({
-            title: req.body.service_title,
+            service_title: req.body.service_title,
             service_type: req.body.service_type,
             service_description: req.body.service_description,
             budget: req.body.budget,
-            member_id: req.body.member_id
+            user_id: req.body.user_id
         })
         .then(dbServiceData => res.json(dbServiceData))
         .catch(err => {
@@ -73,9 +78,9 @@ router.post('/', (req, res) => {
         });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Service.update({
-            title: req.bosy.service_title
+            service_title: req.body.service_title
         }, {
             where: {
                 id: req.params.id
@@ -96,7 +101,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Service.destroy({
             where: {
                 id: req.params.id

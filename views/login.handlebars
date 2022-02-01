@@ -27,14 +27,16 @@
                 <label for="password-signup">Password</label>
                 <input type="password" class="form-control" id="password-signup">
                 <p class="pb-3"></p>
+                
                 <h5>Choose an account type:</h5>
-                <input type="checkbox"  id="defaultCheck1">
-                <label for="account-type" class="checkbox">Member</label>
+                <input type="radio" name="membership" value="Member" id="member_1">
+                <label for="member_1">Member</label>
+    
+                <input type="radio" name="membership" value="Developer" id="dev">
+                <label for="dev">Developer</label>
 
-                <input type="checkbox" id="defaultCheck2">
-                <label for="account-type defaultCheck2" class="checkbox">Developer</label>
                 <p class="pb-4"></p>
-                <button type="submit" class="px-5">SIGNUP</button>
+                <button type="submit" id="btn" class="px-5">SIGNUP</button>
         </form>
     </div>
 </div> 
