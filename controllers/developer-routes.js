@@ -23,19 +23,13 @@ router.get('/', withAuth, (req, res) => {
         include: [
             {
                 model: User,
-                attributes: ['username', 'account_type']
+                attributes: ['username']
             }
         ]
     })
     .then(dbServiceData => {
-        const services = dbServiceData.map(service => service.get({ plain: true }));
-        console.log(User.account_type);
-        if (!User.account_type === 'developer') {
-            
-            res.render('member-dashboard', { services, loggedIn: true });
-            return;
-        }
-            res.render('developer-dashboard', { services, loggedIn: true });
+        const services = dbServiceData.map(post => post.get({ plain: true }));
+        res.render('developer-dashboard', { services, loggedIn: true });
     })
     .catch(err => {
         console.log(err);
