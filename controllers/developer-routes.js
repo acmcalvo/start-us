@@ -7,9 +7,9 @@ const withAuth = require('../utils/auth');
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
     Service.findAll({
-        where: {
-            user_id: req.session.user_id
-        },
+        // where: {
+        //     user_id: req.session.user_id
+        // },
         attributes: [
             'id',
             'service_title',
@@ -28,7 +28,7 @@ router.get('/', withAuth, (req, res) => {
         ]
     })
     .then(dbServiceData => {
-        const services = dbServiceData.map(post => service.get({ plain: true }));
+        const services = dbServiceData.map(post => post.get({ plain: true }));
         res.render('developer-dashboard', { services, loggedIn: true });
     })
     .catch(err => {
