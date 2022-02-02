@@ -193,6 +193,10 @@ header h1 {
     padding: 15px;
 
 }
+.btn-accept {
+    margin-bottom:50px;
+
+}
 
 .service .title span {
     font-style: italic;

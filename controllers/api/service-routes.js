@@ -78,7 +78,7 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
-router.put('/:id', withAuth, (req, res) => {
+router.put('/edit-service/:id', withAuth, (req, res) => {
     Service.update({
             service_title: req.body.service_title
         }, {

@@ -38,7 +38,7 @@
                     {{#each services as |service|}}
                     <li>
                         {{> service-info service}}
-                        <a href="/member-dashboard/edit/{{service.id}}" class="edit-link">Edit Service</a>
+                        <a href="/member/edit/{{service.id}}" class="edit-link">Edit Service</a>
                     </li>
                     {{/each}}
                 </ol>
@@ -47,6 +47,7 @@
         </div>
     </div>
 <script src="/javascript/add-service.js"></script>
+<script src="/javascript/edit-service.js"></script>
 
 </div>
 
