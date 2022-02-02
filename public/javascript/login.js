@@ -4,20 +4,7 @@ async function loginFormHandler(event) {
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
     
-    // const btn = document.querySelector('#btn');        
-    // const checkboxs = document.querySelectorAll('input[name="membership"]');
-    // btn.addEventListener("click", () => {
-    //     let account_type;
-    //     for (const checkbox of checkboxs) {
-    //         if (checkbox.checked) {
-    //             account_type = checkbox.value;
-    //             break;
-    //         }
-    //     }
-       
-    //     output.innerText = account_type ? `You selected ${account_type}` : `You haven't selected any Membership`;
-    // });
-
+ 
   console.log(email, password)
     if (email && password ) {
       const response = await fetch('/api/users/login', {
@@ -62,7 +49,27 @@ async function loginFormHandler(event) {
       }
     }
   }
+
+  async function membershipFormHandler(event) {
+    event.preventDefault();
+
+    const btn = document.querySelector('#btn');        
+    const radioCheck = document.querySelectorAll('input[name="membership"]').value.trim();
+    btn.addEventListener("click", () => {
+        let account_type;
+        for (const radioCheck of radioCheck) {
+            if (radioCheck.checked) {
+                account_type = radioCheck.value;
+                break;
+            }
+            
+        }
+    
+    })
+  }
+  
   
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+
