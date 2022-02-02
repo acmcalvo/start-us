@@ -24,7 +24,7 @@ Service.init (
             allowNull: false
         },
         budget: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.STRING,
             allowNull: false
         },
         user_id: {
