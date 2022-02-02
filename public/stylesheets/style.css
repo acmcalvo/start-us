@@ -21,13 +21,13 @@ header {
 }
 a {
     text-decoration: none;
-    color: #27AAE1;
+    color: #DF8A27;
     font-weight: bold;
     transition: color .1s;
 }
 
 a:hover {
-    color: #DF8A27;
+    color: #27AAE1;
 }
 
 button {
@@ -182,8 +182,9 @@ header h1 {
 }
 
 .title {
-    background-color: #2F5161;
+    background-color: #27AAE1;
     font-size: 14pt;
+    color:#fff;
     font-weight: bold;
     padding: 15px;
 }

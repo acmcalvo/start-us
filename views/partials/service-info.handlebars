@@ -3,13 +3,15 @@
         {{service_title}}
         {{service_type}} 
         <span>- (Created on
-        {{format_date created_at}} by {{user.username}} - Budget {{budget}}
+        {{format_date created_at}} by {{user.username}} 
         </span>
         
     </div>
     <div class="meta">
+        <h5>Description:</h5>
         {{service_description}}
+        <h5>Budget:</h5>
         {{budget}}
-        <button type="submit" class="px-5" id="accept-project">ACCEPT PROJECT</button>
+        
     </div>
 </article>
