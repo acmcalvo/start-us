@@ -69,7 +69,7 @@ router.post('/', withAuth, (req, res) => {
             service_type: req.body.service_type,
             service_description: req.body.service_description,
             budget: req.body.budget,
-            user_id: req.body.user_id
+            user_id: req.session.user_id
         })
         .then(dbServiceData => res.json(dbServiceData))
         .catch(err => {
