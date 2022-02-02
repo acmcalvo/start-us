@@ -4,6 +4,8 @@ a fullstack app for local freelance services and businesses.
 
 ### Github: https://github.com/cesar863/start-us
 
+### Deployed: https://start-us-team-borderline.herokuapp.com/
+
 ## Description 
 In this group project we were asked to use the skills and technologies we’ve learned over the past six weeks (server-side JavaScript, RESTful APIs, databases, object-relational mapping, environment variables, templating, and authentication).
 We’ll also had to use some of the more conceptual skills we’ve picked up and think like a developer. 

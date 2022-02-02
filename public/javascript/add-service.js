@@ -5,7 +5,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const service_type ="website"// document.querySelector('input[name"service-type"]').value;
+    const service_type = document.querySelector('input[name="service-type"]').value;
     const service_title = document.querySelector('input[name="service-title"]').value;
     const service_description = document.querySelector('input[name="service-description"]').value;
     const budget = document.querySelector('input[name="budget"]').value;
