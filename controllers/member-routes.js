@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const sequielize = require('../config/connection');
+const sequelize = require('../config/connection');
 const { User, Service } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -27,9 +27,9 @@ router.get('/', withAuth, (req, res) => {
             }
         ]
     })
-        .then(dbServiceData => {
-            const services = dbServiceData.map(post => post.get({ plain: true }));
-            res.render('member-dashboard', { services, loggedIn: true });
+    .then(dbServiceData => {
+        const services = dbServiceData.map(post => post.get({ plain: true }));
+        res.render('member-dashboard', { services, loggedIn: true });
     })
     .catch(err => {
         console.log(err);
