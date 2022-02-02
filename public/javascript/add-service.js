@@ -5,11 +5,12 @@
 async function newFormHandler(event) {
     event.preventDefault();
   
-    const service_type = document.querySelector('input[name"service-type"]').value;
+    const service_type = document.querySelector('input[name="service-type"]').value;
     const service_title = document.querySelector('input[name="service-title"]').value;
     const service_description = document.querySelector('input[name="service-description"]').value;
     const budget = document.querySelector('input[name="budget"]').value;
-    const response = await fetch(`/api/services`, {
+    alert(service_type+ service_title+ service_description+ budget)
+    const response = await fetch(`/api/service`, {
       method: 'POST',
       body: JSON.stringify({
         service_type,
@@ -23,7 +24,7 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/user');
+     document.location.replace('/member');
     } else {
       alert(response.statusText);
     }
