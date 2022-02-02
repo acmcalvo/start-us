@@ -6,6 +6,7 @@ h1 {
 }
 h3 {
     color: #27AAE1;
+    font-size: 1.5rem;
 }
 h4 {
     font-weight: bold;
@@ -20,13 +21,13 @@ header {
 }
 a {
     text-decoration: none;
-    color: #27AAE1;
+    color: #DF8A27;
     font-weight: bold;
     transition: color .1s;
 }
 
 a:hover {
-    color: #DF8A27;
+    color: #27AAE1;
 }
 
 button {
@@ -69,6 +70,14 @@ a.navbar-item:hover {
     float:right;
 }
 
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
 
 .jumbotron {
     background-image: url('../assets/hero.jpg');
@@ -86,7 +95,6 @@ input {
     padding: .5%;
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #888;
 }
 
 textarea:focus,
@@ -103,9 +111,24 @@ textarea {
 form>div {
     margin-bottom: 2%;
 }
-
+input[type=radio],
+input.radio{
+    float: right;
+    clear: none;
+    align-items:baseline;
+    
+}
+.service-type {
+    width: 350px;
+    align-items:center;
+}
+.account-type {
+    width: 100px;
+    align-items:center;
+}
 form label {
     display: block;
+    
 }
 
 .login-form {
@@ -119,17 +142,6 @@ form label {
     padding: 1%;
 
 }
-
-.wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-
 
 header h1 {
     font-size: 1em;
@@ -170,14 +182,25 @@ header h1 {
 }
 
 .title {
-    background-color: #2F5161;
+    background-color: #27AAE1;
     font-size: 14pt;
+    color:#fff;
     font-weight: bold;
     padding: 15px;
 }
 
 .meta {
     padding: 15px;
+}
+.card-header{
+    background-color: #27AAE1;
+    font-size: 14pt;
+    color:#fff;
+    font-weight: bold;
+}
+
+.btn-accept {
+    margin-bottom:50px;
 
 }
 
@@ -195,27 +218,8 @@ header h1 {
 }
 
 
-.comment-form {
-    margin-bottom: 5%;
-}
-
-.comment {
-    padding: 1%;
-    margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-    background-color: #ebfbff;
-}
-
-.comment .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
-}
-
 .new-service-form input {
-    width: 300px;
+    width: 400px;
 }
 
 .edit-service-form {
@@ -225,4 +229,5 @@ header h1 {
 footer {
     border-top: 1px solid #ccc;
     padding: 1%;
+    display: block;
 }

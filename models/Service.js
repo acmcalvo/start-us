@@ -24,14 +24,14 @@ Service.init (
             allowNull: false
         },
         budget: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.STRING,
             allowNull: false
         },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'User',
-                key: 'username'
+                model: 'user',
+                key: 'id'
             }
         }
     },

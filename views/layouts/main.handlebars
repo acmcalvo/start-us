@@ -8,18 +8,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/stylesheets/main.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-      <!-- navbar JQuery code -->
-   <script> 
-        $(document).ready(function() {
-        // Check for click events on the navbar burger icon
-            $('.navbar-burger').click(function() {
-            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-            $(".navbar-burger").toggleClass("is-active");
-            $(".navbar-menu").toggleClass("is-active");
-    
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -37,10 +25,9 @@
                     </a>
                 </div>    
                 <!-- navbar links -->
-                <div class="navbar-menu" id="navMenu">
-                    {{#if loggedIn}}
-                    <a href="/developer-dashboard/" class="navbar-item">Dev Dashboard</a> |
-                    <a href="/member-dashboard/" class="navbar-item">Dev Dashboard</a> |
+                <div class="navbar-menu" id="navMenu"></div>
+                    {{#if loggedIn }} <!-- create condition for dev and member dashboard -->
+                    <a href="/user/" class="navbar-item">Dashboard</a>
                     <a id="logout" href="/" class="navbar-item">Logout</a>
                     {{else}}
                     <a href="/" class="navbar-item">Home</a> 
@@ -54,6 +41,8 @@
         <main>
             {{{ body }}}
         </main>
+    </div>
+    <div class="wrapper">
         <footer>
             <div class="columns">
                 <div class="column is-one-third">
@@ -85,6 +74,7 @@
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
+    <script src="/javascript/burger.js"></script>
     {{/if}}
 </body>
 

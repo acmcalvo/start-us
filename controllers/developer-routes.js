@@ -1,21 +1,23 @@
 const router = require('express').Router();
 const sequielize = require('../config/connection');
 const { User, Service } = require('../models');
+const withAuth = require('../utils/auth');
 
 
 // get all posts for dashboard
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Service.findAll({
-        where: {
-            user_id: req.res.id
-        },
+        // where: {
+        //     user_id: req.session.user_id
+        // },
         attributes: [
             'id',
             'service_title',
             'service_type',
             'service_description',
             'budget',
-            'user_id'
+            'created_at',
+            
             // serquelize data goes here
         ],
         include: [
@@ -27,7 +29,7 @@ router.get('/', (req, res) => {
     })
     .then(dbServiceData => {
         const services = dbServiceData.map(post => post.get({ plain: true }));
-        res.render('dashboard', { services, loggedIn: true });
+        res.render('developer-dashboard', { services, loggedIn: true });
     })
     .catch(err => {
         console.log(err);
@@ -35,7 +37,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/edit/:id', (req, res) => {
+router.get('/edit/:id', withAuth, (req, res) => {
     Service.findByPk(req.params.id, {
         attributes: [
             'id',

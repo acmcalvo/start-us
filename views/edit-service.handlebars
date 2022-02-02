@@ -1,39 +1,35 @@
-        <div class="container py-5">
-            <div class="row">  
-                <form class="edit-service-form">
-                    <a href="/member-dashboard"> &larr; Back to dashboard</a>
-                    <h1 class="py-5">Edit Service</h1>
-                    <h5>Edit service type:</h5>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="defaultCheck1" value="{{service.service_type}}" >
-                        <label for="service-type" class="form-check-label">Website</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="defaultCheck2" value="{{service.service_type}}">
-                        <label for="service-type defaultCheck2" class="form-check-label">Online Marketing</label>
-                    </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="defaultCheck3" value="{{service.service_type}}">
-                        <label for="service-type defaultCheck3" class="form-check-label">Programming</label>   
-                    </div>
-                    <div class="form-group">
-                        <label for="service-title">Service Title</label>
-                        <input type="text" class="form-control" id="service-title" value="{{service.service_title}}">
-                    </div>
-                    <div class="form-group">
-                        <label for="service-description">Service Description</label>
-                        <input type="textarea" class="form-control" id="service-description" value="{{service.service_description}}">
-                    </div>
-                    <div class="form-group">
-                        <label for="budget">Budget</label>
-                        <input type="text" class="form-control" id="budget" value="{{service.budget}}">
-                    </div>
-                    <button type="submit">Save Post</button>
-                    <button type="button" class="delete-post-btn">Delete Post</button>
+<div class="wrapper">
+    <div class="columns">
+        <div class="column">  
+            <a href="/member" class="pt-5"> &larr; Back to dashboard</a>
+                <h1 class="pt-5">Edit Service</h1>
+                <h3>Edit service type:</h3>
+                <form class="edit-service-form"></form>
+                    <div class="service-type">
+                        <input type="radio" name="service-type" value="website">
+                        <label for="website">Website</label>
+        
+                        <input type="radio" name="service-type" value="online-marketing">
+                        <label for="online-marketing">Online Marketing</label>
+                    
+                        <input type="radio" name="service-type" value="programming">
+                        <label for="programming">Programming</label>
+                    </div>  
+                        
+                    <label for="service-title">Service Title</label>
+                    <input name="service-title" type="text">
+                    
+                    <label for="service-description">Service Description</label>
+                    <input name="service-description" type="textarea">
+                    
+                    <label for="budget">Budget</label>
+                    <input name="budget" type="text" class="form-control">
+                    <p class="pb-4"></p> 
+                    <button type="submit" class="px-5">SUBMIT</button>
                 </form>
-            </div>
         </div>
     </div>
+</div>
 
 <script src="/javascript/edit-service.js"></script>
 <script src="/javascript/delete-service.js"></script>

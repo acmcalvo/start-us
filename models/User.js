@@ -37,8 +37,8 @@ User.init(
         },
         account_type: {
             type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: 'member'  
+            // allowNull: false,
+            // defaultValue: 'member'
         }
     },
     {

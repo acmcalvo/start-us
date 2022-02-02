@@ -1,3 +1,4 @@
+<div class="wrapper">
 <div class="columns">
     <div class="column">
         <form class="login-form">
@@ -18,24 +19,29 @@
             <h1 class="pt-4">Sign Up</h1>
             <h4 class="pb-4">Let's grow together!</h4>
                     
-                <label for="username-signup">Username</label>
-                <input type="text" class="form-control" id="username-signup">
+            <label for="username-signup">Username</label>
+            <input type="text" class="form-control" id="username-signup">
                 
-                <label for="email-signup">Email address</label>
-                <input type="text" class="form-control" id="email-signup" >
+            <label for="email-signup">Email address</label>
+            <input type="text" class="form-control" id="email-signup" >
                 
-                <label for="password-signup">Password</label>
-                <input type="password" class="form-control" id="password-signup">
-                <p class="pb-3"></p>
-                <h5>Choose an account type:</h5>
-                <input type="checkbox"  id="defaultCheck1">
-                <label for="account-type" class="checkbox">Member</label>
+            <label for="password-signup">Password</label>
+            <input type="password" class="form-control" id="password-signup">
+            <p class="pb-3"></p>
+            <h5>Choose an account type:</h5>
+            <div class="account-type">
+            <input type="radio" name="account-type" value="member" class="radioBtn">
+            <label for="member_1">Member</label>
 
-                <input type="checkbox" id="defaultCheck2">
-                <label for="account-type defaultCheck2" class="checkbox">Developer</label>
-                <p class="pb-4"></p>
-                <button type="submit" class="px-5">SIGNUP</button>
+            <input type="radio" name="account-type" value="developer" class="radioBtn">
+            <label for="dev">Developer</label>
+            </div>  
+
+            <p class="pb-4"></p>
+            <button type="submit" class="px-5">SIGNUP</button>
+            <p class="pb-4"></p>
         </form>
     </div>
 </div> 
-<script scr="/javascript/login.js"></script> <!--absolute path-->
+</div>
+<script src="/javascript/login.js"></script> <!--absolute path-->

@@ -1,54 +1,58 @@
-<div class="container py-5">
-    <div class="row">
-        <section>
-            <form class="new-service-form">
-                <h1>Member Dashboard</h1>
+<div class="wrapper">
+    <div class="columns">
+        <div class="column">
+            <section>
+                <h1 class="pt-4">Member Dashboard</h1>
                 <h3 class="py-3">Create a new service request</h3>
                 <h5>Choose an option for a Service Type:</h5>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="defaultCheck1">
-                    <label for="service-type" class="form-check-label">Website</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="defaultCheck2">
-                    <label for="service-type defaultCheck2" class="form-check-label">Online Marketing</label>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="defaultCheck3">
-                    <label for="service-type defaultCheck3" class="form-check-label">Programming</label>
-                </div>
-                <div class="form-group">
-                    <label for="service-title">Service Title</label>
-                    <input type="text" class="form-control" id="service-title">
-                </div>
-                <div class="form-group">
-                    <label for="service-description">Service Description</label>
-                    <input type="textarea" class="form-control" id="service-description">
-                </div>
-                <div class="form-group">
-                    <label for="budget">Budget</label>
-                    <input type="text" class="form-control" id="budget">
-                </div>
-                <button type="submit" class="px-5">SUBMIT</button>
-            </form>
-        </section>
-    </div>
-    {{#if services.length}}
+                <form class="new-service-form">
+                    <div class="service-type">
+                        <input type="radio" name="service-type" value="website">
+                        <label for="website">Website</label>
+        
+                        <input type="radio" name="service-type" value="online-marketing">
+                        <label for="online-marketing">Online Marketing</label>
+                    
+                        <input type="radio" name="service-type" value="programming">
+                        <label for="programming">Programming</label>
+                    </div>  
+                        
+                        <label for="service-title">Service Title</label>
+                        <input name="service-title" type="text">
+                    
+                        <label for="service-description">Service Description</label>
+                        <input name="service-description" type="textarea">
+                    
+                        <label for="budget">Budget</label>
+                        <input name="budget" type="text" class="form-control">
+                    <p class="pb-4"></p> 
+                    <button type="submit" class="px-5">SUBMIT</button>
+                </form>
+            </section>
+        </div>
+        <div class="column">
+            {{#if services.length}}
     <!-- users won't see any of this content if they have no services -->
-    <div class="row">
-    <section>
-        <h3 class="py-5">Your Service Requests</h3>
-        <ol>
-            {{#each services as |service|}}
-            <li>
-                {{> service-info service}}
-                <a href="/member-dashboard/edit/{{service.id}}" class="edit-link">Edit Service</a>
-            </li>
-            {{/each}}
-        </ol>
-</div>
-</section>
-{{/if}}
+            <section>
+                <h1 class="pt-4">My Service Requests</h1>
+                <ol>
+                    {{#each services as |service|}}
+                    <li>
+                        {{> service-info service}}
+                        <div class="card-footer">
+                        <a href="/member/edit/{{service.id}}" class="edit-link card-footer-item">Edit Service</a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+            </section>
+        {{/if}}
+        </div>
+    </div>
+<script src="/javascript/add-service.js"></script>
+<script src="/javascript/edit-service.js"></script>
 
-<script scr="/javascript/add-service.js"></script>
 </div>
+
+{{!-- <script src="/javascript/add-service.js"></script>
+</div> --}}
