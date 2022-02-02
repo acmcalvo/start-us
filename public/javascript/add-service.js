@@ -31,7 +31,7 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-     //document.location.replace('/member');
+    document.location.replace('/member');
     } else {
       alert(response.statusText);
     }
