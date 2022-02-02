@@ -198,6 +198,15 @@ header h1 {
     color:#fff;
     font-weight: bold;
 }
+.woi {
+    background-color: #DF8A27;
+}
+.wfr {
+    background-color: #ebc75d;
+}
+.done {
+    background-color: #0dae50;
+}
 
 .btn-accept {
     margin-bottom:50px;

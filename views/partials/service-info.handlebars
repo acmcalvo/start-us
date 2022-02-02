@@ -1,13 +1,14 @@
 <div class="card">
 <article>
     <div class="card-header">
-        {{service_title}}
         {{service_type}} 
         <span> - (Created on
         {{format_date created_at}} by {{user.username}})
         </span>
     </div>
     <div class="card-content">
+        <h5>Title:</h5>
+        {{service_title}}
         <h5>Description:</h5>
         {{service_description}}
         <h5>Budget:</h5>

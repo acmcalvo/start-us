@@ -3,7 +3,7 @@
         <div class="column">
             <section>
                 <h1>Developer Dashboard</h1>
-                <h3 class="pt-5">Service Requests from Members</h3>     
+                <h3 class="pt-2">SERVICE REQUESTS from Members</h3>     
                 <ol class="service-list">
                 {{#each services as |service|}}
                 <li>
@@ -15,15 +15,21 @@
             </section>
         </div>
         
-        {{#if accept-project.length}}
+        {{#if services.length}}
         <div class="column">
             <section>  
-                <h3 class="py-5">Your Projects</h3>
+                <h3 class="pt-5"> MY PROJECTS</h3>
                 <ol class="projected-accepted">
                 {{#each services as |service|}}
                 <li>
                 {{> service-info service }}
-                
+                <h5>STATUS</h5>
+       
+                    <p class="pb-2"></p> 
+                    <button type="submit" class="px-3 woi">WORKING ON IT</button>
+                    <button type="submit" class="px-3 wfr">WAITING FOR REVIEW</button>
+                    <button type="submit" class="px-5 done">DONE</button>
+                   <p class="pb-5"></p>      
                 </li>
                 {{/each}}
                 </ol>

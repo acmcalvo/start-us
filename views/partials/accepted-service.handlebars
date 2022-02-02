@@ -1,0 +1,33 @@
+<div class="card">
+<article>
+    <div class="card-header">
+        {{service_title}}
+        <span> - (Created on
+        {{format_date created_at}} by {{user.username}})
+        </span>
+    </div>
+    <div class="card-content"> 
+        <h5>Description:</h5>
+        {{service_description}}
+        <h5>Budget:</h5>
+        {{budget}}
+        <span> - (Accepted on
+        {{format_date created_at}} by {{user.username}})
+        </span>
+    </div>
+    </article>
+</div>
+
+
+<div class="">
+    {{#each this}}
+    <section class="comment">
+        <div class="text">
+            {{comment_text}}
+        </div>
+        <div class="meta">
+            {{user.username}} on {{format_date created_at}}
+        </div>
+    </section>
+    {{/each}}
+</div>

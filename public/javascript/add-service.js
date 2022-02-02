@@ -9,7 +9,7 @@ async function newFormHandler(event) {
     const service_title = document.querySelector('input[name="service-title"]').value;
     const service_description = document.querySelector('input[name="service-description"]').value;
     const budget = document.querySelector('input[name="budget"]').value;
-    alert(service_type+ service_title+ service_description+ budget)
+
     const response = await fetch(`/api/service`, {
       method: 'POST',
       body: JSON.stringify({
