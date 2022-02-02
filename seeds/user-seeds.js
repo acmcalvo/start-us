@@ -5,33 +5,34 @@ const userdata = [
     {
         username: 'alex123',
         email: 'alex@123.com',
-        password: 'password123'
-    },
+        password: 'password123',
+        account_type: 'member'},
     {
         username: 'frank123',
         email: 'frank@123.com',
-        password: 'password123'
-    },
+        password: 'password123',
+        account_type: 'member'},
     {
         username: 'john123',
         email: 'john@123.com',
-        password: 'password123'
-    },
+        password: 'password123',
+        account_type: 'member'},
     {
         username: 'ben123',
         email: 'ben@123.com',
-        password: 'password123'
-    },
+        password: 'password123',
+        account_type: 'member'},
     {
         username: 'tom123',
         email: 'tom@123.com',
-        password: 'password123'
+        password: 'password123',
+        account_type: 'member'
     },
     {
         username: 'julia123',
         email: 'julia@123.com',
         password: 'password123',
-        account_type: 'developer'
+        account_type: 'member'
         
     },
     {

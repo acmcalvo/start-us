@@ -1,9 +1,13 @@
 # Start Us
- Is a fullstack app for local freelance services and businesses.
+
+a fullstack app for local freelance services and businesses.
+
+### Github: https://github.com/cesar863/start-us
 
 ## Description 
 In this group project we were asked to use the skills and technologies we’ve learned over the past six weeks (server-side JavaScript, RESTful APIs, databases, object-relational mapping, environment variables, templating, and authentication).
 We’ll also had to use some of the more conceptual skills we’ve picked up and think like a developer. 
+
 Data is the foundation of full-stack web development. Creating a real-world application means that we can use what we learned about object-oriented programming and object-relational mapping to model real-world objects and processes, using MySQL and Sequelize to connect our application to real data and deploying our application to a service like Heroku that can handle server-side code and data.
 
 
@@ -13,6 +17,7 @@ Data is the foundation of full-stack web development. Creating a real-world appl
 
 * [Usage](#usage)
 * [Screenshots](#screenshots)
+* [Dependencies](#dependenciesyeah)
 * [Questions](#questions) 
 
 
@@ -45,11 +50,30 @@ Developer Dashboard
 Edit & Delete a service
 ![Edit and Delete a service]()
 
+## Dependencies
+- bcrypt
+- bulma-start
+- connect-session-sequelize
+- CSS
+- dotenv
+- express
+- express-hanflebars
+- express-session
+- HTML
+- JavaScript
+- Jest
+- MYSQL
+- MYSQL2
+- Node.js
+- NPM
+- seed
+- sequelize
 
+## Created By
+[Andi Conner](github.com/andiconner)
+[Alvaro Calvo](github.com/acmcalvo)
+[Cesar Martinez](github.com/cesar863)
 
 
 ## Questions
 If you have any questions about the repo, please send an email to [Alvaro](mailto:acmcalvo@gmail.com), [Andi](mailto:andiconner@icloud.com) or [Cesar](mailto:Cesarm.863@gmail.com). 
-
-
-
