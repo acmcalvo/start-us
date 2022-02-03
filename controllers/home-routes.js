@@ -33,6 +33,37 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/user', (req, res) => {
+    Service.findAll({
+        attributes: [
+            'id',
+            'service_title',
+            'service_type',
+            'service_description',
+            'budget',
+            'user_id'
+            //[sequelize.literal('(SELECT COUNT(*) FROM user WHERE user.id')]
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbServiceData => {
+        const services = dbServiceData.map(post => post.get({ plain: true }));
+        res.render('homepage', {
+            services,
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 router.get('/service/:id', (req, res) => {
     Service.findOne({
         where: {
