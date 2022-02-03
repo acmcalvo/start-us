@@ -1,7 +1,7 @@
 // function for the edit-service.handlebars
 // <form class="edit-service-form">
 
-
+//  put it inside a promise. use a then statement and fix the routes.
 async function editFormHandler(event) {
     event.preventDefault();
   
