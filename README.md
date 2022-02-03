@@ -75,7 +75,7 @@ Edit & Delete a service
 [Andi Conner](github.com/andiconner)
 [Alvaro Calvo](github.com/acmcalvo)
 [Cesar Martinez](github.com/cesar863)
-
+Jacob Levine
 
 ## Questions
 If you have any questions about the repo, please send an email to [Alvaro](mailto:acmcalvo@gmail.com), [Andi](mailto:andiconner@icloud.com) or [Cesar](mailto:Cesarm.863@gmail.com). 
