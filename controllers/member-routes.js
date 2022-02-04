@@ -36,7 +36,7 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
-
+// Edit services
 router.get('/edit/:id', withAuth, (req, res) => {
     Service.findOne( { 
         where: {

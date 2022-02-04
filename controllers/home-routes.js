@@ -63,7 +63,7 @@ router.get('/user', (req, res) => {
         res.status(500).json(err);
     });
 });
-
+//added line 70 id: req.params.id and change service to findOne
 router.get('/service/:id', (req, res) => {
     Service.findOne({
         where: {
