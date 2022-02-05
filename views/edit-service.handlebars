@@ -1,10 +1,11 @@
 <div class="wrapper">
     <div class="columns">
-        <div class="column">  
+        <div class="column"> 
+            <section>
             <a href="/member" class="pt-5"> &larr; Back to dashboard</a>
                 <h1 class="pt-5">Edit Service</h1>
                 <h3>Edit service type:</h3>
-                <form class="edit-service-form"></form>
+                <form class="edit-service-form">
                     <div class="service-type">
                         <input type="radio" name="service-type" value="website">
                         <label for="website">Website</label>
@@ -23,13 +24,16 @@
                     <input name="service-description" type="textarea">
                     
                     <label for="budget">Budget</label>
-                    <input name="budget" type="text" class="form-control">
+                    <input name="budget" type="number" class="form-control">
                     <p class="pb-4"></p> 
-                    <button type="submit" class="px-5">SUBMIT</button>
+                    <button type="submit" id="edit-submit" class="px-5">SUBMIT</button>
+                    <button id="edit-delete" class="px-5">DELETE</button>
                 </form>
+                </section>
         </div>
     </div>
-</div>
-
+{{!-- <script src="/javascript/add-service.js"></script> --}}
 <script src="/javascript/edit-service.js"></script>
 <script src="/javascript/delete-service.js"></script>
+</div>
+

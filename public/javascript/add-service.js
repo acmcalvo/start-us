@@ -3,8 +3,8 @@
 //<form class="new-service-form"> ok AC
 let serviceTypeData = ''
 
-const serviceTypeForm = document.getElementById('service-type')
-  serviceTypeForm.addEventListener("change", event => {
+const serviceTypeForm = document.getElementById('service-type');
+  serviceTypeForm.addEventListener("change", (event) => {
     const {value} = event.target
     serviceTypeData = value
     console.log(serviceTypeData)
