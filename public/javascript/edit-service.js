@@ -4,11 +4,11 @@
 let serviceTypeData = ''
 
 const serviceTypeForm = document.getElementById('service-type');
-// serviceTypeForm.addEventListener('change', (event) => {
-//   const { value } = event.target
-//   serviceTypeData = value
-//   console.log(serviceTypeData)
-// });
+serviceTypeForm.addEventListener('change', (event) => {
+  const { value } = event.target
+  serviceTypeData = value
+  console.log(serviceTypeData)
+});
 
 async function editFormHandler(event) {
   event.preventDefault();
