@@ -36,9 +36,12 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
-
+// Edit services
 router.get('/edit/:id', withAuth, (req, res) => {
-    Service.findByPk(req.params.id, {
+    Service.findOne( { 
+        where: {
+            id: req.params.id
+        },
         attributes: [
             'id',
             'service_title',
@@ -60,7 +63,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         if (dbServiceData) {
             const services = dbServiceData.get({ plain: true });
             res.render('edit-service', {
-                post,
+                services,
                 loggedIn: true
             });
         }

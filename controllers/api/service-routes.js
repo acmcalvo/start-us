@@ -65,6 +65,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
     Service.create({
+        // ... req.body, user_id: req.session.user_id
             service_title: req.body.service_title,
             service_type: req.body.service_type,
             service_description: req.body.service_description,
@@ -78,10 +79,8 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
-router.put('/service/:id', withAuth, (req, res) => {
-    Service.update({
-            service_title: req.body.service_title
-        }, {
+router.put('/:id', withAuth, (req, res) => {
+    Service.update( req.body, {
             where: {
                 id: req.params.id
             }
