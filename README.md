@@ -38,19 +38,23 @@ price they are willing to pay.
 Here are some images showing the app pages:
 
 Homepage
-![Homepage]()
+<img width="1333" alt="Screen Shot 2022-02-06 at 3 22 00 PM" src="https://user-images.githubusercontent.com/90540881/152699941-bf307855-73aa-4c60-a530-096b7c7928a2.png">
+
 
 Login & Signup page
-![Login and Signup page]()
+<img width="1300" alt="Screen Shot 2022-02-06 at 3 22 25 PM" src="https://user-images.githubusercontent.com/90540881/152699970-a266b5e4-b6a0-4eda-aa90-c8b52c153356.png">
+
 
 Member Dashboard
-![Member Dashboard]()
+<img width="1373" alt="Screen Shot 2022-02-06 at 3 23 02 PM" src="https://user-images.githubusercontent.com/90540881/152700000-0226f072-8106-43ca-b0b8-3719c481902c.png">
+
 
 Developer Dashboard
-![Developer Dashboard]()
+<img width="1313" alt="Screen Shot 2022-02-06 at 3 23 23 PM" src="https://user-images.githubusercontent.com/90540881/152700018-cdb21271-54f8-4d95-849b-5086322a32fe.png">
+
 
 Edit & Delete a service
-![Edit and Delete a service]()
+<img width="1326" alt="Screen Shot 2022-02-06 at 3 23 10 PM" src="https://user-images.githubusercontent.com/90540881/152700032-535d4320-ea71-4ffd-ae7d-fd64c6f18c6e.png">
 
 ## Dependencies
 - bcrypt
@@ -72,8 +76,8 @@ Edit & Delete a service
 - sequelize
 
 ## Created By
-[Andi Conner](github.com/andiconner)
-[Alvaro Calvo](github.com/acmcalvo)
+[Andi Conner](github.com/andiconner),
+[Alvaro Calvo](github.com/acmcalvo), and
 [Cesar Martinez](github.com/cesar863)
 Jacob Levine
 
