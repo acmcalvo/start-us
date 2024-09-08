@@ -1,7 +1,7 @@
 {
   "name": "start-us",
   "version": "1.0.0",
-  "description": "",
+  "description": "a fullstack app for local freelance services and businesses.",
   "main": "server.js",
   "scripts": {
     "test": "jest",
@@ -24,15 +24,21 @@
     "bulma-start": "^0.0.4",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^14.3.2",
-    "express": "^4.17.2",
+    "env": "^0.0.2",
+    "express": "^4.19.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
+    "handlebars": "^4.7.8",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.15",
     "seed": "^0.4.4",
-    "sequelize": "^6.15.0"
+    "seeds": "^2.3.1",
+    "sequelize": "^6.37.3",
+    "simple-update-notifier": "^2.0.0",
+    "vercel": "^37.4.0"
   },
   "devDependencies": {
-    "jest": "^27.4.7"
+    "jest": "^27.5.1"
   }
 }
