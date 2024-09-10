@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: start-us
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    envVars:
+      - key: MYSQL_ADDON_HOST
+        value: <your-mysql-host>
+      - key: MYSQL_ADDON_USER
+        value: <your-mysql-user>
+      - key: MYSQL_ADDON_PASSWORD
+        value: <your-mysql-password>
+      - key: MYSQL_ADDON_DB
+        value: <your-mysql-database>
+    regions:
+      - Ohio
