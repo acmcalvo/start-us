@@ -13,5 +13,4 @@ services:
         value: <your-mysql-password>
       - key: MYSQL_ADDON_DB
         value: <your-mysql-database>
-    regions:
-      - Ohio
+    
