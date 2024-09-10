@@ -57,13 +57,23 @@ sequelize.sync({ force: false })
 // MySQL connection pool setup using mysql2/promise with Clever Cloud variables
 const mysql = require('mysql2/promise');
 
+// const pool = mysql.createPool({
+//   host: process.env.MYSQL_ADDON_HOST,
+//   user: process.env.MYSQL_ADDON_USER,
+//   password: process.env.MYSQL_ADDON_PASSWORD,
+//   database: process.env.MYSQL_ADDON_DB,
+//   waitForConnections: true,
+//   connectionLimit: 10, // Set the connection pool limit
+//   queueLimit: 0
+// });
+
 const pool = mysql.createPool({
-  host: process.env.MYSQL_ADDON_HOST,
+  host: process.env.MYSQL_ADDON_HOST,  // Should be the external host from Clever Cloud
   user: process.env.MYSQL_ADDON_USER,
   password: process.env.MYSQL_ADDON_PASSWORD,
   database: process.env.MYSQL_ADDON_DB,
   waitForConnections: true,
-  connectionLimit: 10, // Set the connection pool limit
+  connectionLimit: 10,
   queueLimit: 0
 });
 
