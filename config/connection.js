@@ -9,9 +9,9 @@ try {
         sequelize = new Sequelize(process.env.MYSQL_ADDON_URI, {
             dialect: 'mysql',
             dialectOptions: {
-                ssl: process.env.NODE_ENV === 'production' ? {
-                    rejectUnauthorized: true  // Use strict SSL settings in production
-                } : false  // Disable SSL for non-production environments
+                ssl: {
+                    rejectUnauthorized: false  // Allow self-signed certificates
+                }
             }
         });
     } else {
@@ -22,7 +22,7 @@ try {
             port: process.env.DB_PORT || 3306,
             dialectOptions: {
                 ssl: {
-                    rejectUnauthorized: false  // Adjust SSL settings as needed for local testing
+                    rejectUnauthorized: false  // Allow self-signed certificates for local testing too
                 }
             }
         });
