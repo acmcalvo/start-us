@@ -15,6 +15,29 @@
   #       value: <your-mysql-database>
     
 # Exported from Render on 2024-09-10T23:38:26Z
+# services:
+# - type: web
+#   name: Start-us
+#   runtime: node
+#   repo: https://github.com/acmcalvo/start-us
+#   plan: free
+#   envVars:
+#       - key: MYSQL_ADDON_HOST
+#         value: <your-mysql-host>
+#       - key: MYSQL_ADDON_USER
+#         value: <your-mysql-user>
+#       - key: MYSQL_ADDON_PASSWORD
+#         value: <your-mysql-password>
+#       - key: MYSQL_ADDON_DB
+#         value: <your-mysql-database>
+#   region: ohio
+#   buildCommand: npm install
+#   startCommand: node server.js
+#   rootDir: .
+# version: "1"
+
+
+# Exported from Render on 2024-09-11T02:29:50Z
 services:
 - type: web
   name: Start-us
@@ -22,14 +45,18 @@ services:
   repo: https://github.com/acmcalvo/start-us
   plan: free
   envVars:
-      - key: MYSQL_ADDON_HOST
-        value: <your-mysql-host>
-      - key: MYSQL_ADDON_USER
-        value: <your-mysql-user>
-      - key: MYSQL_ADDON_PASSWORD
-        value: <your-mysql-password>
-      - key: MYSQL_ADDON_DB
-        value: <your-mysql-database>
+  - key: MYSQL_ADDON_URI
+    sync: false
+  - key: MYSQL_ADDON_PASSWORD
+    sync: false
+  - key: MYSQL_ADDON_PORT
+    sync: false
+  - key: MYSQL_ADDON_USER
+    sync: false
+  - key: MYSQL_ADDON_DB
+    sync: false
+  - key: MYSQL_ADDON_HOST
+    sync: false
   region: ohio
   buildCommand: npm install
   startCommand: node server.js
