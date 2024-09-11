@@ -119,7 +119,7 @@ input.radio{
     
 }
 .service-type {
-    width: 350px;
+    /* width: 0.625rem; */
     align-items:center;
 }
 .account-type {
